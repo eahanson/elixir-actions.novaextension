@@ -1,0 +1,28 @@
+{
+  "activationEvents": ["onLanguage:html"],
+  "categories": ["commands"],
+  "commands": {
+    "extensions": [{
+        "title": "Open URL",
+        "command": "elixir-actions.openURL"
+      },
+      {
+        "title": "Run External Tool",
+        "command": "elixir-actions.runExternalTool"
+      }
+    ]
+  },
+  "config": [{
+    "key": "elixir-actions.foobar",
+    "title": "Foo the bar",
+    "type": "boolean",
+    "default": false
+  }],
+  "description": "Performs various actions related to the Elixir programming language",
+  "entitlements": { "process": true },
+  "identifier": "eahanson.elixir-actions",
+  "main": "main.js",
+  "name": "Elixir Actions",
+  "organization": "Erik Hanson",
+  "version": "1.0"
+}
