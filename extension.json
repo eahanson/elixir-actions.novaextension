@@ -1,28 +1,63 @@
 {
-  "activationEvents": ["onLanguage:html"],
+  "activationEvents": ["*"],
+  "bugs": "https://github.com/eahanson/elxir-actions.novaextension/issues",
   "categories": ["commands"],
   "commands": {
     "extensions": [{
-        "title": "Open URL",
-        "command": "elixir-actions.openURL"
+        "command": "elixir-actions.run-this-test",
+        "shortcut": "cmd-opt-t",
+        "title": "Run This Test"
       },
       {
-        "title": "Run External Tool",
-        "command": "elixir-actions.runExternalTool"
+        "command": "elixir-actions.run-this-test-file",
+        "shortcut": "cmd-opt-ctrl-t",
+        "title": "Run This Test File"
+      },
+      {
+        "command": "elixir-actions.rerun-tests",
+        "shortcut": "ctrl-shift-t",
+        "title": "Re-run Last Test or Test File"
+      },
+      {
+        "command": "elixir-actions.run-all-tests",
+        "shortcut": "cmd-opt-ctrl-shift-t",
+        "title": "Run All Tests"
+      },
+      {
+        "command": "elixir-actions.run-stale-tests",
+        "shortcut": "cmd-opt-ctrl-s",
+        "title": "Run Stale Tests"
+      },
+      {
+        "command": "elixir-actions.run-stale-tests-first-failure",
+        "shortcut": "cmd-opt-ctrl-shift-s",
+        "title": "Run Stale Tests Until First Failure"
+      },
+      {
+        "command": "elixir-actions.docs",
+        "shortcut": "cmd-opt-ctrl-d",
+        "title": "Show Documentation for Symbol"
       }
     ]
   },
   "config": [{
-    "key": "elixir-actions.foobar",
-    "title": "Foo the bar",
-    "type": "boolean",
-    "default": false
+    "key": "elixir-actions.shell",
+    "title": "Unix shell",
+    "type": "string",
+    "default": "/bin/zsh"
+  }, {
+    "key": "elixir-actions.tmux-path",
+    "title": "Path to tmux",
+    "type": "string",
+    "default": "/opt/homebrew/bin/tmux"
   }],
   "description": "Performs various actions related to the Elixir programming language",
   "entitlements": { "process": true },
+  "homepage": "https://github.com/eahanson/elixir-actions.novaextension/",
   "identifier": "eahanson.elixir-actions",
   "main": "main.js",
   "name": "Elixir Actions",
   "organization": "Erik Hanson",
+  "repository": "https://github.com/eahanson/elixir-actions.novaextension/",
   "version": "1.0"
 }
